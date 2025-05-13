@@ -1,0 +1,129 @@
+/* ─────────────── HERO SECTION ─────────────── */
+
+.hero {
+  background-color: var(--main-color);
+  padding: 50px 0 8px 0;
+  color: #fff;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero__text {
+  max-width: 723px;
+}
+
+/* ─────────────── BADGE ─────────────── */
+
+.hero__badge {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-bottom: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+
+  font-family: var(--font-secondary);
+  font-size: var(--fs-text);
+  line-height: 21px;
+  letter-spacing: 2%;
+  text-align: left;
+  color: rgb(37, 38, 65);
+}
+
+/* ─────────────── TITLE ─────────────── */
+
+.hero__title {
+  margin-bottom: 40px;
+
+  color: rgb(255, 255, 255);
+  font-family: var(--font-secondary);
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+/* ─────────────── OPINION (LABEL + AVATARS) ─────────────── */
+
+.hero__opinion {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero__label {
+  background-color: var(--secondary-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+
+  color: rgb(255, 255, 255);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hero__avatars {
+  position: absolute;
+  left: 200px;
+}
+
+/* ─────────────── STAT BLOCK ─────────────── */
+
+.hero__stat {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 24px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero__stat__text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.hero__stat__number {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  color: rgb(84, 85, 103);
+}
+
+.hero__stat__label {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  color: rgb(84, 85, 103);
+}
+
+.hero__stat img {
+  padding: 10px 8px;
+  border-radius: 8px;
+  background: rgb(35, 189, 238);
+}
+
+/* ─────────────── IMAGE SECTION ─────────────── */
+
+.hero__image-wrapper {
+  max-width: 400px;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}

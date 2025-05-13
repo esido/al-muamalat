@@ -1,0 +1,52 @@
+:root {
+  /* Font families */
+  --font-main: "Helvetica Neue", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-accent: "Open Sans", sans-serif;
+
+  /* Font sizes */
+  --fs-title: 40px;
+  --fs-subtitle: 20px;
+  --fs-text: 17px;
+
+  /* Colors */
+  --main-color: rgb(0, 150, 136);
+  --secondary-color: rgb(253, 102, 31);
+  --accent-color: rgb(104, 104, 104);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  font-family: var(--font-main);
+  font-size: var(--fs-title);
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 574px;
+  font-family: var(--font-main);
+  font-size: var(--fs-subtitle);
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.text {
+  font-family: var(--font-main);
+  font-size: var(--fs-text);
+}

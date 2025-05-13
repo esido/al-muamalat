@@ -1,0 +1,140 @@
+.contact {
+  padding: 70px 0;
+}
+
+.contact__container {
+  display: flex;
+  align-items: center;
+}
+
+.contact__content-left {
+  height: 465px;
+  padding: 45px 48px;
+  border-radius: 10px 0px 0px 10px;
+  background: rgb(250, 233, 211);
+}
+
+.contact__content-left h3 {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(210, 133, 39);
+}
+
+.contact__content-left p {
+  max-width: 805px;
+  margin-top: 20px;
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(210, 133, 39);
+}
+
+.contact__content-right {
+  height: 465px;
+  padding: 45px 35px;
+  border-radius: 0px 10px 10px 0px;
+  background: rgb(249, 247, 243);
+}
+
+.contact__content-right h2 {
+  font-family: var(--font-secondary);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(21, 32, 50);
+}
+
+.contact__content-right p {
+  max-width: 370px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(21, 32, 50);
+}
+
+.contact__content-right input[type="text"],
+.contact__content-right input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(104, 104, 104);
+}
+
+.phone-input {
+  position: relative;
+}
+
+.phone-input .flag {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.phone-input input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px 10px 65px; /* добавляем слева место под флаг */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(21, 32, 50);
+}
+
+.contact__content-right button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--main-color);
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}

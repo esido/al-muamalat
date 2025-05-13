@@ -1,0 +1,95 @@
+/* ─────────────── HEADER CONTAINER ─────────────── */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  font-family: var(--font-accent);
+}
+
+/* ─────────────── NAVIGATION ─────────────── */
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  font-family: var(--font-accent);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(104, 104, 104);
+}
+
+.nav__link--active {
+  color: var(--main-color);
+}
+
+.nav__link--dropdown {
+  gap: 6px;
+}
+
+/* ─────────────── RIGHT SIDE ─────────────── */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+/* Language Button */
+.header__lang {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: rgb(40, 40, 40);
+  font-family: var(--font-accent);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Separator Line */
+.header__line {
+  width: 32px;
+  height: 0;
+  transform: rotate(90deg);
+  border: 0.7px solid rgba(118, 118, 118, 0.6);
+}
+
+/* Sign In Button */
+.header__button {
+  padding: 9px 16px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-family: var(--font-accent);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
