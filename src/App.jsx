@@ -5,6 +5,7 @@ import RouteController from "./routes";
 import { useGsapScrollAnimation } from "./hooks/useGsapScrollAnimation";
 
 import "./App.css";
+import Footer from "./components/footer/Footer";
 
 function App() {
   useGsapScrollAnimation();
@@ -15,6 +16,9 @@ function App() {
         <Header />
       )}
       <RouteController />
+      {!pathname.includes("login") && !pathname.includes("register") && (
+        <Footer />
+      )}
     </>
   );
 }
