@@ -1,30 +1,61 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+import { useForm } from "react-hook-form";
 
-const Register = () => {
+import user from "../../../assets/icons/almuamalat-user.svg";
+
+import "../Auth.css";
+
+const Register = ({ auth }) => {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    const { full_name, phone_number, password } = data;
+    auth.register({ full_name, phone_number, password }, () => {
+      navigate("/");
+    });
+  };
   return (
-    <form className="register-form">
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-      />
+    <div className="register">
+      <h3>
+        Already have an account? <Link to="/login">Sign in</Link>
+      </h3>
+      <form className="auth-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="auth-input">
+          <input
+            {...register("full_name")}
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+          />
+          <div className="auth-icon">
+            <img src={user} alt="user icon" />
+          </div>
+        </div>
 
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter your password"
-      />
+        <div className="auth-input">
+          <input
+            {...register("phone_number")}
+            type="text"
+            id="phoneNumber"
+            placeholder="Phone number"
+          />
+        </div>
 
-      <button type="submit">Sign In</button>
+        <div className="auth-input">
+          <input
+            {...register("password")}
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
 
-      <Link className="create-account-link" to={"/register"}>
-        Create a new account!
-      </Link>
-    </form>
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
   );
 };
 

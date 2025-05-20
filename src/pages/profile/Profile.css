@@ -1,0 +1,32 @@
+.profile {
+  padding: var(--section-padding);
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.profile__header-btn button {
+  padding: 10px 50px;
+  background-color: transparent;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 10px;
+
+  font-family: var(--font-accent);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.profile__header-active button {
+  background-color: var(--main-color);
+  color: white;
+  border: 0;
+}

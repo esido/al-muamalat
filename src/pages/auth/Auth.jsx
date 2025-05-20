@@ -1,15 +1,17 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import logo from "../../assets/images/almuamalat_logo.svg";
-import person from "../../assets/images/almuamalt_login-profile.png";
-import banner from "../../assets/images/almuamalt_login-banner.svg";
+import person from "../../assets/images/almuamalat_login-profile.png";
+import illustration from "../../assets/images/almuamalat__login-illustration.png";
 
 import "./Auth.css";
 import Login from "./login/Login";
 import Register from "./register/Register";
+import { useAuth } from "../../hooks/useAuth";
 
 const Auth = () => {
+  const auth = useAuth();
   const { pathname } = useLocation();
   return (
     <div className="auth" aria-label="Auth Page">
@@ -17,29 +19,33 @@ const Auth = () => {
         <div className="auth__content">
           <div className="auth__header">
             <div className="auth__logo">
-              <img src={logo} alt="logo" />
-            </div>
-            <div className="auth__header-text">
-              <div className="auth__header-question">Questions?</div>
-              <div className="auth__header-person">Ask Diyor</div>
+              <a href="/">
+                <img src={logo} alt="logo" />
+              </a>
             </div>
             <div className="auth__header-profile">
-              <img src={person} alt="person" />
+              <div className="auth__header-info">
+                <p className="auth__header-subtext">Questions?</p>
+                <h3 className="auth__header-name">Ask Diyor</h3>
+              </div>
+              <div className="auth__header-image">
+                <img src={person} alt="person" />
+              </div>
             </div>
           </div>
 
           <div className="auth__main">
             <h1 className="auth__title">Get started</h1>
-            {pathname.includes("login") && <Login />}
-            {pathname.includes("register") && <Register />}
+            {pathname.includes("login") && <Login auth={auth} />}
+            {pathname.includes("register") && <Register auth={auth} />}
           </div>
         </div>
 
         <div className="auth__banner-wrapper">
-          <img src={banner} alt="auth banner" loading="lazy" />
-          <h3 className="auth__banner-title">
-            Welcome to Al Muamalat – Empowering Your Journey in Islamic Finance
-          </h3>
+          <img src={illustration} alt="illustration" />
+          <h2>
+            Welcome to Al Muamalat - Empowering Your Journey in Islamic Finance
+          </h2>
         </div>
       </div>
     </div>

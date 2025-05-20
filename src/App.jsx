@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
 
-import { Header } from "./components/header/Header";
+import { Header } from "./components/shared/header/Header";
 import RouteController from "./routes";
 import { useGsapScrollAnimation } from "./hooks/useGsapScrollAnimation";
 
 import "./App.css";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/shared/footer/Footer";
 
 function App() {
   useGsapScrollAnimation();

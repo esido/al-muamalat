@@ -1,31 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Login = () => {
+import "../Auth.css";
+import { useForm } from "react-hook-form";
+
+const Login = ({ auth }) => {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    const { phone_number, password } = data;
+    auth.login({ phone_number, password }, () => {
+      navigate("/");
+    });
+  };
   return (
-    <form className="login-form">
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-      />
+    <div className="login">
+      <form className="auth-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="auth-email">
+          <input
+            {...register("phone_number")}
+            type="text"
+            id="phoneNumber"
+            placeholder="Phone number"
+          />
+        </div>
 
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter your password"
-      />
+        <input
+          {...register("password")}
+          type="password"
+          id="password"
+          placeholder="Password"
+        />
 
-      <button type="submit">Sign In</button>
+        <button type="submit">Sign In</button>
 
-      <Link className="create-account-link" to={"/register"}>
-        Create a new account!
-      </Link>
-    </form>
+        <Link to="/register" className="auth-new">
+          Create a new account !
+        </Link>
+      </form>
+    </div>
   );
 };
 

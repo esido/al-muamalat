@@ -1,0 +1,104 @@
+.edit-user {
+  background-color: #fff;
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 40px 1px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.edit-user__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.edit-user__info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.edit-user__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-user__name {
+  color: rgb(0, 0, 0);
+  font-family: var(--font-profile);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.edit-user__save {
+  background-color: var(--main-color);
+  border: none;
+  padding: 10px 27px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+
+  font-family: var(--font-profile);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.edit-user__save:hover {
+  background-color: #005c4b;
+}
+
+.edit-user__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.edit-user__row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.edit-user__field {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-user__field label {
+  margin-bottom: 12px;
+  font-family: var(--font-profile);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.edit-user__field input {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgb(249, 249, 249);
+  border: none;
+  outline: none;
+
+  font-family: var(--font-profile);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
